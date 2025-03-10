@@ -1,0 +1,28 @@
+[project]
+name = "artifacts-python"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "uv==0.6.*",
+    "basedpyright==1.28.*",
+    "ruff==0.9.*",
+]
+
+[tool.rye.scripts]
+go = "python ./src/artifacts_python/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/artifacts_python"]
