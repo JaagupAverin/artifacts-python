@@ -16,6 +16,8 @@ dev-dependencies = [
     "uv==0.6.*",
     "basedpyright==1.28.*",
     "ruff==0.9.*",
+    "trio==0.29.*",
+    "httpx==0.28.*",
 ]
 
 [tool.rye.scripts]
